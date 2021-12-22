@@ -6,6 +6,7 @@ Description: Turn Your Thumbnails Into Polaroids
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=
 Author: plg
 Author URI: http://le-gall.net/pierrick
+Has Settings: true
 */
 
 global $conf;
@@ -70,7 +71,7 @@ function process_polaroid($tpl_vars, $pictures)
   return $tpl_vars;
 }
 
-function polaroid_prefilter($content, $smarty)
+function polaroid_prefilter($content)
 {
   $pattern = '#\<(div|ul).*?id\="thumbnails".*?\>\{\$THUMBNAILS\}\</(div|ul)\>#';
   $replacement = '<ul class="polaroid">{$THUMBNAILS}</ul>';

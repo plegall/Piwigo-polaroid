@@ -48,8 +48,13 @@ $tabs = array(
     ),
   );
 
+$func = function ($a)
+{
+  return $a["code"];
+};
+
 $tab_codes = array_map(
-  create_function('$a', 'return $a["code"];'),
+  $func,
   $tabs
   );
 
