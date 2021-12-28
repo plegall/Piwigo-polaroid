@@ -48,15 +48,7 @@ $tabs = array(
     ),
   );
 
-$func = function ($a)
-{
-  return $a["code"];
-};
-
-$tab_codes = array_map(
-  $func,
-  $tabs
-  );
+$tab_codes = array_column($tabs, 'code');
 
 if (isset($_GET['tab']) and in_array($_GET['tab'], $tab_codes))
 {

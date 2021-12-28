@@ -28,7 +28,7 @@ if( !defined("PHPWG_ROOT_PATH") )
 
 include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 include_once(PHPWG_ROOT_PATH.'include/functions_picture.inc.php');
-load_language('plugin.lang', PHPWG_ROOT_PATH);
+load_language('plugin.lang', POLAROID_PATH);
 
 $admin_base_url = get_root_url().'admin.php?page=plugin-community-config';
 
